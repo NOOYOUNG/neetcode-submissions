@@ -22,10 +22,10 @@ jobs:
 
       - name: Sync source into yoonyoung/ folder
         run: |
-          rsync -av --delete \
+          rsync -av \
             --exclude='.git' \
             --exclude='.github' \
-            source/ target/yoonyoung/
+            source/ target/yoonyoung/neetcode/
 
       - name: Get source commit message
         id: source_msg
